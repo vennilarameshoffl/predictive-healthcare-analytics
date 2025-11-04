@@ -1,0 +1,11 @@
+Predictive Healthcare Analytics using Deep Learning and Explainable AI
+
+This project focuses on predicting diabetes using the PIMA Indian Diabetes Dataset. The main goal was to explore how artificial intelligence can help in early disease detection and support healthcare decisions. I began by building a simple machine learning model using Logistic Regression to set a baseline, and then developed a Deep Learning model using TensorFlow and Keras to improve performance. To ensure transparency, I also implemented Explainable AI (XAI) techniques to interpret how different health factors influence predictions — an important step for AI in healthcare.
+
+The dataset contains medical information such as glucose levels, BMI, blood pressure, age, and the number of pregnancies. These features were normalized using StandardScaler before model training. The Logistic Regression model achieved an accuracy of around 76%, while the Deep Learning model improved slightly to about 77%. Although the difference was modest, the neural network captured non-linear relationships in the data more effectively.
+
+To make the model’s predictions more interpretable, I used SHAP (SHapley Additive exPlanations) to visualize feature importance. The SHAP analysis showed that glucose, BMI, and age were the most significant factors influencing diabetes risk. This interpretability step added transparency and helped explain the reasoning behind each prediction.
+
+Both the trained model and the scaler were saved using Joblib, allowing reuse without retraining. The entire workflow — from data preprocessing to model training, evaluation, and explainability — is contained in a single Jupyter notebook named diabetes_project.ipynb. The repository also includes the saved model files (diabetes_model.pkl and scaler.pkl).
+
+Overall, this project demonstrates how AI can be applied to healthcare analytics in a transparent and trustworthy way. It highlights that while Deep Learning can enhance predictive performance, explainability is equally vital for responsible AI in medicine. In the future, I plan to extend this work to predict other diseases, explore medical imaging data, and focus on fairness and bias reduction in healthcare models.
